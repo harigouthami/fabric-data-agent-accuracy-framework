@@ -1,0 +1,36 @@
+Date,UserId,ProductArea,Region,ActiveUsers,Sessions,SatisfactionRate
+2026-01-01,USR001,Dashboard,North America,1,5,85.5
+2026-01-01,USR002,Reports,Europe,1,3,78.2
+2026-01-01,USR003,Dashboard,Asia Pacific,1,7,92.1
+2026-01-01,USR004,Analytics,North America,1,4,81.0
+2026-01-01,USR005,Reports,Europe,1,2,75.5
+2026-01-02,USR001,Dashboard,North America,1,6,88.0
+2026-01-02,USR002,Analytics,Europe,1,4,79.5
+2026-01-02,USR003,Dashboard,Asia Pacific,1,8,90.3
+2026-01-02,USR006,Reports,North America,1,3,82.7
+2026-01-02,USR007,Analytics,Europe,1,5,77.8
+2026-01-03,USR001,Reports,North America,1,4,86.2
+2026-01-03,USR003,Analytics,Asia Pacific,1,6,91.5
+2026-01-03,USR004,Dashboard,North America,1,5,83.0
+2026-01-03,USR008,Reports,Asia Pacific,1,3,88.9
+2026-01-03,USR009,Dashboard,Europe,1,7,76.4
+2026-01-04,USR002,Dashboard,Europe,1,5,80.1
+2026-01-04,USR005,Analytics,Europe,1,4,74.8
+2026-01-04,USR006,Dashboard,North America,1,6,84.5
+2026-01-04,USR010,Reports,Asia Pacific,1,3,89.2
+2026-01-04,USR011,Analytics,North America,1,5,81.7
+2026-01-05,USR001,Analytics,North America,1,7,87.3
+2026-01-05,USR003,Reports,Asia Pacific,1,4,93.0
+2026-01-05,USR007,Dashboard,Europe,1,6,78.9
+2026-01-05,USR012,Analytics,Asia Pacific,1,5,90.1
+2026-01-05,USR013,Reports,North America,1,3,82.4
+2026-01-06,USR002,Reports,Europe,1,4,79.8
+2026-01-06,USR004,Analytics,North America,1,6,84.2
+2026-01-06,USR008,Dashboard,Asia Pacific,1,5,87.6
+2026-01-06,USR014,Reports,Europe,1,3,76.9
+2026-01-06,USR015,Dashboard,North America,1,7,85.0
+2026-01-07,USR001,Dashboard,North America,1,8,88.5
+2026-01-07,USR005,Dashboard,Europe,1,5,77.3
+2026-01-07,USR009,Analytics,Europe,1,4,75.6
+2026-01-07,USR011,Reports,North America,1,6,83.1
+2026-01-07,USR016,Analytics,Asia Pacific,1,5,91.8

@@ -1,0 +1,66 @@
+{
+  "measures": [
+    {
+      "name": "TotalUsers",
+      "expression": "DISTINCTCOUNT(UsageMetrics[UserId])",
+      "description": "Count of unique users",
+      "formatString": "#,##0"
+    },
+    {
+      "name": "TotalSessions",
+      "expression": "SUM(UsageMetrics[Sessions])",
+      "description": "Total number of sessions",
+      "formatString": "#,##0"
+    },
+    {
+      "name": "AvgSatisfaction",
+      "expression": "AVERAGE(UsageMetrics[SatisfactionRate])",
+      "description": "Average user satisfaction rate",
+      "formatString": "0.0%"
+    },
+    {
+      "name": "DailyActiveUsers",
+      "expression": "CALCULATE(DISTINCTCOUNT(UsageMetrics[UserId]), UsageMetrics[Date] = TODAY())",
+      "description": "Users active today",
+      "formatString": "#,##0"
+    },
+    {
+      "name": "Last7DaysUsers",
+      "expression": "CALCULATE(DISTINCTCOUNT(UsageMetrics[UserId]), DATESINPERIOD(UsageMetrics[Date], TODAY(), -7, DAY))",
+      "description": "Users active in last 7 days",
+      "formatString": "#,##0"
+    },
+    {
+      "name": "RegionCount",
+      "expression": "DISTINCTCOUNT(UsageMetrics[Region])",
+      "description": "Number of unique regions",
+      "formatString": "#,##0"
+    },
+    {
+      "name": "ProductAreaCount",
+      "expression": "DISTINCTCOUNT(UsageMetrics[ProductArea])",
+      "description": "Number of product areas",
+      "formatString": "#,##0"
+    },
+    {
+      "name": "HighSatisfactionUsers",
+      "expression": "CALCULATE(DISTINCTCOUNT(UsageMetrics[UserId]), UsageMetrics[SatisfactionRate] >= 80)",
+      "description": "Users with satisfaction >= 80%",
+      "formatString": "#,##0"
+    }
+  ],
+  "tables": [
+    {
+      "name": "UsageMetrics",
+      "columns": [
+        {"name": "Date", "type": "DateTime", "description": "Activity date"},
+        {"name": "UserId", "type": "String", "description": "Unique user identifier"},
+        {"name": "ProductArea", "type": "String", "description": "Product area name"},
+        {"name": "Region", "type": "String", "description": "Geographic region"},
+        {"name": "ActiveUsers", "type": "Int64", "description": "Count of active users"},
+        {"name": "Sessions", "type": "Int64", "description": "Number of sessions"},
+        {"name": "SatisfactionRate", "type": "Decimal", "description": "User satisfaction (0-100)"}
+      ]
+    }
+  ]
+}

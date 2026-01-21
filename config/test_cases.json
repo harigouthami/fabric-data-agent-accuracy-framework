@@ -1,0 +1,44 @@
+[
+  {
+    "question": "How many total users?",
+    "dax": "EVALUATE ROW(\"TotalUsers\", DISTINCTCOUNT(UsageMetrics[UserId]))",
+    "metric": "TotalUsers",
+    "description": "Count of unique users"
+  },
+  {
+    "question": "What is the average satisfaction rate?",
+    "dax": "EVALUATE ROW(\"AvgSatisfaction\", AVERAGE(UsageMetrics[SatisfactionRate]))",
+    "metric": "AvgSatisfaction",
+    "description": "Average user satisfaction score"
+  },
+  {
+    "question": "What is the total session count?",
+    "dax": "EVALUATE ROW(\"TotalSessions\", SUM(UsageMetrics[Sessions]))",
+    "metric": "TotalSessions",
+    "description": "Sum of all sessions"
+  },
+  {
+    "question": "How many regions do we have?",
+    "dax": "EVALUATE ROW(\"RegionCount\", DISTINCTCOUNT(UsageMetrics[Region]))",
+    "metric": "RegionCount",
+    "description": "Count of unique regions"
+  },
+  {
+    "question": "Show users by region",
+    "dax": "EVALUATE SUMMARIZECOLUMNS(UsageMetrics[Region], \"Users\", DISTINCTCOUNT(UsageMetrics[UserId]))",
+    "metric": "UsersByRegion",
+    "description": "User count per region"
+  },
+  {
+    "question": "Which product has the most users?",
+    "dax": "EVALUATE TOPN(1, SUMMARIZECOLUMNS(UsageMetrics[ProductArea], \"Users\", DISTINCTCOUNT(UsageMetrics[UserId])), [Users], DESC)",
+    "metric": "TopProduct",
+    "description": "Product area with most users"
+  },
+  {
+    "question": "Show last 7 days trend",
+    "dax": "EVALUATE SUMMARIZECOLUMNS(UsageMetrics[Date], \"DailyUsers\", DISTINCTCOUNT(UsageMetrics[UserId]), \"DailySessions\", SUM(UsageMetrics[Sessions]))",
+    "metric": "DailyTrend",
+    "description": "Daily user and session counts"
+  }
+]
